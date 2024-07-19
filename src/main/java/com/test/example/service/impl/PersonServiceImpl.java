@@ -45,7 +45,6 @@ public class PersonServiceImpl implements PersonService {
         Set<Course> savedCourses = courseService.saveCourses(courses);
         assignCoursesToPersonSubclass(person, savedCourses);
 
-
         return personRepository.save(person);
     }
 
@@ -87,7 +86,9 @@ public class PersonServiceImpl implements PersonService {
         if (!StringUtils.hasText(courseName) && !StringUtils.hasText(groupName)) {
             return personRepository.findAllStudents();
         }
-        return getPeopleBy(courseName, groupName, personRepository::findStudentsByCourses, personRepository::findStudentsByGroup);
+        return getPeopleBy(courseName, groupName,
+                personRepository::findStudentsByCourses,
+                personRepository::findStudentsByGroup);
     }
 
     @Override

@@ -18,7 +18,8 @@ public class TeacherController {
     private final PersonService personService;
 
     @GetMapping
-    public Set<Teacher> getTeachers(@RequestParam(required = false) String courseName, @RequestParam(required = false) String groupName) {
+    public Set<Teacher> getTeachers(@RequestParam(required = false) String courseName,
+                                    @RequestParam(required = false) String groupName) {
         return personService.getTeachersBy(courseName, groupName);
     }
 
