@@ -42,4 +42,4 @@ Areas for improvement :
 - Move the database connection properties and sensitive information like usernames and passwords for example to environment variables - to be outside of the code base
 - Extend code coverage with unit and integration tests
 - Add pagination of the results for students/teachers and query parameters like limit and offset
-- 
+- Add swagger documentation
