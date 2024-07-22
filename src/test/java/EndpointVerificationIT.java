@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class StudentVerificationIT {
+class EndpointVerificationIT {
 
     private final Course calculusCourse = createCourse("Calculus", CourseType.MAIN);
     private final Course algebraCourse = createCourse("Algebra", CourseType.MAIN);
